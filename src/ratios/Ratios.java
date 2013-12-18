@@ -22,7 +22,7 @@ public class Ratios {
         new Ratios();
     }
 
-    private  void ratios() {
+    private void ratios() {
         Pattern pattern = Pattern.compile("(\\d+)/(\\d+)");
         Pattern p2 = Pattern.compile("(\\w+)");
         Matcher m2;
@@ -46,7 +46,7 @@ public class Ratios {
                     ratio = new Ratio(num, den);
                 }
             }
-           mr.put(e.getKey(), ratio);
+            mr.put(e.getKey(), ratio);
         }
     }
 
@@ -63,20 +63,6 @@ public class Ratios {
             String key = e.getKey().toString();
             String val = e.getValue().toString();
             out.println(key + "\t\t" + val);
-        }
-    }
-
-    
-    
-    private void regex() {
-        Pattern pattern = Pattern.compile("(?<key>\\w+)\\s*:\\s*(?<numerator>\\d+)/*(?<denominator>\\d*)%*");
-        Matcher matcher = pattern.matcher(input);
-        String k, n, d;
-        while (matcher.find()) {
-            k = matcher.group("key");
-            n = matcher.group("numerator");
-            d = matcher.group("denominator");
-            out.printf("Key: %s, Numerator: %s, Denominator: %s\n", k, n, d);
         }
     }
 }
