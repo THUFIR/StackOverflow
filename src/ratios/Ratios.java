@@ -66,6 +66,8 @@ public class Ratios {
         }
     }
 
+    
+    
     private void regex() {
         Pattern pattern = Pattern.compile("(?<key>\\w+)\\s*:\\s*(?<numerator>\\d+)/*(?<denominator>\\d*)%*");
         Matcher matcher = pattern.matcher(input);
